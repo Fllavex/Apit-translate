@@ -18,8 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         outputText.textContent = data.responseData.translatedText;
 
-
+        if (inputText.value.trim() === '') {
+        outputText.textContent = '';
+        }
     
 }
 translateBtn.addEventListener('click', translateText);
+
 });
